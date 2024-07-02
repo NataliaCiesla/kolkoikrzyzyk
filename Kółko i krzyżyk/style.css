@@ -1,0 +1,50 @@
+body{
+    background-color: aqua;
+}
+.grid-container{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.board{
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 130px);
+    grid-gap: 5px;
+    border: 2px solid blue;
+}
+.cell{
+    background-color: white;
+    border: 1px solid blue;
+}
+.cell:hover{
+    background-color: blueviolet;
+}
+.circle{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 8px solid blue;
+    margin: auto;
+}
+.cross{
+    height: 100px;
+    background-color: rgb(162, 223, 241);
+    position: relative;
+    width: 20px;
+    transform: rotate(45deg);
+    margin: auto;
+    top: 10 px;
+}
+.cross:after{
+    content:"l l l l l l l l l l l l";
+    background: pink;
+    transform: rotate(180deg);
+    position:absolute;
+    top: 40px;
+    left: -40px;
+    height: 20px;
+    width: 100px;
+}
